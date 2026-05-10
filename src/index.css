@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --color-border-theme: rgba(255, 255, 255, 0.08);
+  --color-bg-theme: #050505;
+  
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white antialiased font-sans;
+  }
+}
+
+@layer components {
+  .geometric-border {
+    @apply border-white/10;
+  }
+  
+  .luxury-label {
+    @apply text-[10px] uppercase font-bold tracking-[0.4em] text-white/40;
+  }
+}
+
+.italic {
+  font-family: inherit;
+  font-style: italic;
+  font-weight: 300;
+}
+
